@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.sidebar-container {
+  width: 400px;
+  height: 100vh;
+  display: block;
+  background: #fff;
+  float: left;
+  z-index: 100;
+  position: fixed;
+  margin-left: -340px;
+  -webkit-transition: margin-left 0.8s;
+  -moz-transition: margin-left 0.8s;
+  -ms-transition: margin-left 0.8s;
+  -o-transition: margin-left 0.8s;
+  transition: margin-left 0.8s;
+}
+
+.content-container {
+  width: 100%;
+  float: left;
+  display: block;
+  height: 100%;
+  position: absolute;
+  padding-left: 60px;
+}
+
+.sidebar-container:hover {
+  margin-left: 0;
+}
+.sidebar-hover-darken{
+	  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.sidebar-container:hover + .sidebar-hover-darken {
+  opacity: 0.3;
+}
+
+.sidebar-link {
+  width: 100%;
+  height: 60px;
+  display: block;
+  line-height: 60px;
+  color: #444;
+  cursor: pointer;
+}
+
+.sidebar-link span:first-child {
+  margin-left: 1em;
+  float: left;
+  font-size: 150%;
+}
+
+.sidebar-link .material-icons {
+  float: right;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 200%;
+}
+
+.about-hover-bg:hover {
+  background: #DFFBFF;
+}
+
+.contact-hover-bg:hover {
+  background: #C2FFC6;
+}
+
+.gallery-hover-bg:hover {
+  background: #DFDCFF;
+}
+
