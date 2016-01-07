@@ -25,7 +25,10 @@ $(".module-hover-container").on("mouseover", function() {
 
 
 $(".href-module").on("click",function(){
-console.log(document.location= $(this).data("href"))
+var location = 	$(this).data("href")
+transition.out();
+setTimeout(function(){document.location= location},600)
+
 	
 })
 
