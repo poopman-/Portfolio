@@ -10,14 +10,14 @@
 </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap-custom.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+	<script type="text/javascript" src="../../templates.js"></script>
     <link href="../style.css" rel="stylesheet" type="text/css">
     <link href="../../sidebar.css" rel="stylesheet" type="text/css">
   </head><body>
-    <div class="sidebar-container">
-      <a class="sidebar-link about-hover-bg"><span>About Me</span><span class="material-icons"></span></a>
-      <a class="sidebar-link contact-hover-bg"><span>Contact Me</span><span class="material-icons"></span></a>
-      <a class="sidebar-link gallery-hover-bg"><span>View Gallery</span><span class="material-icons"></span></a>
-    </div>
+<script id="sidebar-template" type="text/x-handlebars-template">{{{sidebar.gallery}}}</script>
+<div class="sidebar-placeholder"></div>
+
     <div class="content-container sidebar-hover-darken">
       <div class="cover">
         <div class="background-image-fixed cover-image" style="background-image : url('images/Fostercare-background.jpg')"></div>
@@ -30,7 +30,7 @@
                     <h2>Research</h2>
                     <p>Click on the button below to view the entire research process that went
                       into this project.</p>
-                    <a class="btn btn-block btn-info btn-lg" href="https://drive.google.com/file/d/0B5KuQF3uXouqd2NzTnU2blZjOVE/view?usp=sharing" target="_blank"><i class="fa fa-file-pdf-o fa-fw text-success"></i> View Research PDF</a>
+                    <a class="btn btn-block btn-info btn-lg" href="files/Research-Presentation.pdf" target="_blank"><i class="fa fa-file-pdf-o fa-fw text-success"></i> View Research PDF</a>
                   </div>
                 </div>
                 <div class="col-md-4 text-center">
@@ -62,22 +62,22 @@
                 <small style="color:black">Contributions</small>
               </h1>
             </div>
-            <div class="col-md-4">
-              <img src="images/Research-paper.png" class="img-responsive img-rounded" onclick="$('#research-1').modal('toggle');">
+            <div class="col-md-4 ">
+              <img src="images/Research-paper.png" class="img-responsive img-rounded  showpointer" onclick="$('#research-1').modal('toggle');">
               <h2>Creation of a reseach based activity</h2>
               <p>During the second part of the research phase, the team was responsible
                 for interviewing stakeholders. My role was to create a &nbsp;physical activity
                 designed to gain insights.</p>
             </div>
             <div class="col-md-4">
-              <img src="images/Research-digital.png" class="img-responsive img-rounded" onclick="$('#research-2').modal('toggle');">
+              <img src="images/Research-digital.png" class="img-responsive img-rounded showpointer " onclick="$('#research-2').modal('toggle');">
               <h2>Digital translation</h2>
               <p>I took the initiative to then translate this activity into a digital platform
                 for the interviews that took place remotely—something that I am now known
                 for.</p>
             </div>
             <div class="col-md-4">
-              <img src="images/Research-data.png" class="img-responsive img-thumbnail" onclick="$('#research-3').modal('toggle');">
+              <img src="images/Research-data.png" class="img-responsive img-thumbnail showpointer" onclick="$('#research-3').modal('toggle');">
               <h2>Quantitative data analysis</h2>
               <p>Instead of tallying all of the data by hand, I created a platform to gather
                 and analyses all of the data automatically.&nbsp;</p>
@@ -94,24 +94,19 @@
               </h1>
             </div>
             <div class="col-md-4">
-              <img src="images/Ideation-Architecture.png" class="img-responsive img-thumbnail" onclick="$('#ideation-1').modal('toggle');">
-              <h2>Creation of a reseach based activity</h2>
-              <p>During the second part of the research phase, the team was responsible
-                for interviewing stakeholders. My role was to create a &nbsp;physical activity
-                designed to gain insights.</p>
+              <img src="images/Ideation-Architecture.png" class="img-responsive img-thumbnail showpointer" onclick="$('#ideation-1').modal('toggle');">
+              <h2>Development of site architecture</h2>
+              <p>The site’s architecture was created before the pages of the prototype would be built. This is due to the fact that architecture has the potential to impact layout. </p>
             </div>
             <div class="col-md-4">
-              <img src="images/Ideation-Slider.png" class="img-responsive img-thumbnail" onclick="$('#ideation-2').modal('toggle');">
-              <h2>Digital translation</h2>
-              <p>I took the initiative to then translate this activity into a digital platform
-                for the interviews that took place remotely—something that I am now known
-                for.</p>
+              <img src="images/Ideation-Slider.png" class="img-responsive img-thumbnail showpointer" onclick="$('#ideation-2').modal('toggle');">
+              <h2>Online acuity assessment</h2>
+              <p>Developed was an online acuity assessment that would allow a user to input symptoms and rate their level of discomfort. The data would then be analyzed and give the user an idea of treatment options. </p>
             </div>
             <div class="col-md-4">
-              <img src="images/Ideation-sidebar.png" class="img-responsive img-rounded" onclick="$('#ideation-3').modal('toggle');">
-              <h2>Quantitative data analysis</h2>
-              <p>Instead of tallying all of the data by hand, I created a platform to gather
-                and analyses all of the data automatically.&nbsp;</p>
+              <img src="images/Ideation-sidebar.png" class="img-responsive img-rounded showpointer" onclick="$('#ideation-3').modal('toggle');">
+              <h2>Navigation</h2>
+              <p>The navigation development was important because the youth do not and some could not read well. The navigation is on the side and uses large icons, color coding, ad if the user hovers over the icon long enough a description will appear.  </p>
             </div>
           </div>
         </div>
@@ -136,7 +131,7 @@
             <div class="col-md-6">
               <a style="color:inherit; font-style:none;" href="files/Style and Transitions Guide.pdf" target="_blank">
               <h2>Style Guide</h2>
-              <img src="images/Refinement-guide.png" class="img-responsive img-thumbnail">
+              <img src="images/Refinement-guide.png" class="img-responsive img-thumbnail showpointer">
               <p>I took the initiative to then translate this activity into a digital platform
                 for the interviews that took place remotely—something that I am now known
                 for.</p>
@@ -229,11 +224,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h1 class="modal-title">Quantitative data analysis</h1>
+            <h1 class="modal-title">Development of site architecture</h1>
           </div>
           <div class="modal-body">
-            <p>Instead of tallying all of the data by hand, I created a platform to gather
-              and analyses all of the data automatically</p>
+            <p>The site’s architecture was created before the pages of the prototype would be built. This is due to the fact that architecture has the potential to impact layout.</p>
             <img src="images/Ideation-Architecture.png" class="img-responsive img-thumbnail">
           </div>
           <div class="modal-footer">
@@ -249,11 +243,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h1 class="modal-title">Quantitative data analysis</h1>
+            <h1 class="modal-title">Online acuity assessment</h1>
           </div>
           <div class="modal-body">
-            <p>Instead of tallying all of the data by hand, I created a platform to gather
-              and analyses all of the data automatically</p>
+            <p>Developed was an online acuity assessment that would allow a user to input symptoms and rate their level of discomfort. The data would then be analyzed and give the user an idea of treatment options.</p>
             <img src="images/Ideation-Slider.png" class="img-responsive img-thumbnail">
           </div>
           <div class="modal-footer">
@@ -269,11 +262,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h1 class="modal-title">Quantitative data analysis</h1>
+            <h1 class="modal-title">Navigation</h1>
           </div>
           <div class="modal-body">
-            <p>Instead of tallying all of the data by hand, I created a platform to gather
-              and analyses all of the data automatically</p>
+            <p>The navigation development was important because the youth do not and some could not read well. The navigation is on the side and uses large icons, color coding, ad if the user hovers over the icon long enough a description will appear.</p>
             <img src="images/Ideation-sidebar.png" class="img-responsive img-thumbnail">
           </div>
           <div class="modal-footer">
@@ -284,6 +276,8 @@
     </div>
     <!--modal done-->
       <div class="whiteTransition-white"></div>
+	  <div class="whiteTransition"></div>
+<script type="text/javascript" src="../../module.js"></script>
 <script type="text/javascript" src="../../page-transition.js"></script>
 <script type="text/javascript" >transition.in()</script>
 

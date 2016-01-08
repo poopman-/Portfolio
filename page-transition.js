@@ -1,5 +1,6 @@
 var transition = {
     out: function() {
+
         $(".whiteTransition").show();
     },
     in : function() {
@@ -24,3 +25,4 @@ setTimeout(function(){
 
 }
 };
+

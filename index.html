@@ -4,21 +4,22 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+	<script type="text/javascript" src="templates.js"></script>
     <link href="style2.css" rel="stylesheet" type="text/css">
     <link href="sidebar.css" rel="stylesheet" type="text/css">
+	
   </head><body>
-    <div class="sidebar-container">
-      <a class="sidebar-link about-hover-bg" contenteditable="true"><span>About Me</span><span class="material-icons"></span></a>
-      <a class="sidebar-link contact-hover-bg"><span>Contact Me</span><span class="material-icons"></span></a>
-      <a class="sidebar-link gallery-hover-bg"><span>View Gallery</span><span class="material-icons"></span></a>
-    </div>
+<script id="sidebar-template" type="text/x-handlebars-template">{{{sidebar.main}}}</script>
+<div class="sidebar-placeholder"></div>
+
     <div class="section sidebar-hover-darken" style="height: 100%; padding: 0px;">
       <div class="content-container " style="height: 100%; background:#005887;">
         <div class="center-vert">
           <div class="section">
             <div class="container 3d-me" style="height:100%; ">
               <div class="row">
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/fostercare/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/fostercare/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/Fostercare-background-tn.jpg" class="img-responsive"></a>
                   <span class="module-hover-container">
                     <span class="module-hover">
@@ -31,7 +32,7 @@
                     </span>
                   </span>
                 </div>
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/helpscd/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/helpscd/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/HelpSCD-background-tn.jpg" class="img-responsive"></a>
 				                    <span class="module-hover-container">
                     <span class="module-hover">
@@ -44,7 +45,7 @@
                     </span>
                   </span>
                 </div>
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/impact/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/impact/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/Impact-background-tn.jpg" class="img-responsive"></a>
 				                    <span class="module-hover-container">
                     <span class="module-hover">
@@ -59,7 +60,7 @@
                 </div>
               </div>
               <div class="row">
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/calendar/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/calendar/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/Calendar-background-tn.jpg" class="img-responsive"></a>
 				                    <span class="module-hover-container">
                     <span class="module-hover">
@@ -72,7 +73,7 @@
                     </span>
                   </span>
                 </div>
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/gameboard/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/gameboard/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/Gameboard-background-tn.jpg" class="img-responsive"></a>
 				                    <span class="module-hover-container">
                     <span class="module-hover">
@@ -85,7 +86,7 @@
                     </span>
                   </span>
                 </div>
-                <div data-href= "file:///S:/Documents/webites/personal/port_winter.2015/gallery/sketches/index.html" class="col-md-4 padding15 href-module">
+                <div data-href= "gallery/sketches/index.html" class="col-md-4 padding15 href-module">
                   <a><img src="images/Sketches-background-tn.jpg" class="img-responsive"></a>
 				                    <span class="module-hover-container">
                     <span class="module-hover">
@@ -110,6 +111,7 @@
     <script>
       setTimeout(function(){ $("body").css("background","black")  },200)
     </script>
-  
+ <div class="whiteTransition-white"></div> 
 <div class="whiteTransition"></div>
+<script type="text/javascript" >transition.in()</script>
 </body></html>
