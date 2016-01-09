@@ -60,6 +60,12 @@
   transform: translateY(-50%);
   width: 100%;
 }
+.mobile .center-vert {
+  position: absolute;
+  top: 0%;
+  transform: translateY(0%);
+  width: 100%;
+}
 .module-content {
   padding: 0px;
   font-size:150%;
